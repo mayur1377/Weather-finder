@@ -1,0 +1,216 @@
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Croissant One';
+  user-select: none;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+body
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-left: 10%;
+  background: rgb(0, 171, 187);
+  padding-right: 10%;
+  transform: scale(1.2);
+}
+.wrapper
+{
+  width:400px;
+  border-radius: 7px;
+background: white;
+  z-index:1;
+}
+.wrapper header
+{
+  font-size:30px;
+  font-weight:500;
+  font-family: 'Croissant One';
+  padding:10px;
+}
+header i
+{
+  cursor: pointer;
+  font-size: 0px;
+  margin-right: 8px;
+}
+.wrapper.active header i
+{
+  font-size:30px;
+  margin-left:5px;
+
+}
+
+.wrapper .input-part
+{
+  margin : 20px;
+}
+.wrapper.active .input-part
+{
+  display: none;
+}
+.input-part .info-txt
+{
+  display: none;
+  background: rgb(51, 205, 67);
+  font-size:17px;
+  padding:10px;
+  color:white;
+  border-radius: 10px;
+  height:40px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+.input-part .info-txt.error
+{
+  display: block;
+  background:rgb(250, 51, 51);
+  font-size: 15px;
+  color:rgb(176, 0, 0);
+  height:40px;
+  border : 1px black;
+}
+.input-part .info-txt.pending
+{
+  display: block;
+  color:rgb(1, 139, 15);
+  font-size:15px;
+  height:40px;
+  background:rgb(64, 186, 83);
+  border: 1px black;
+}
+.input-part :where(input , button)
+{
+  width:100%;
+  height:55px;
+  border:none;
+}
+.input-part input
+{
+   text-align: center;
+   border:1px black;
+
+}
+.input-part input::is(:focus , :valid)
+{
+  border : 1px solid rgb(235, 179, 50);
+}
+ .sepetator
+{
+  height:1px;
+  width:100%;
+  overflow:visible;
+  margin : 25px 0;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sepetator::before
+{
+  content: "or";
+}
+.input-part button
+{
+  color:white;
+  cursor:pointer;
+  background: rgb(76, 176, 176);
+}
+
+.wrapper .weather-part
+{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0 , 0 , 0 , 0);
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+.wrapper.active .weather-part
+{
+  display: flex;
+  background: rgba(0 , 0 , 0 , 0);
+}
+.weather-part img
+{
+  height:300px;
+  width:300px;
+}
+.weather-part .temp
+{
+ display: flex;
+ font-size:72px;
+ font-weight:200;
+}
+.weather-part .temp  .numb
+{
+  font-weight: 100;
+}
+.weather-part .temp .deg
+{
+  font-size:40px;
+  margin: 10px 5px 0  0 ;
+  display: block;
+}
+.weather-part .location
+{
+  font-size:12px;
+}
+.location i
+{
+  font-size:22px;
+  margin-right: 5px;
+}
+.weather-part .bottom-details
+{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+.bottom-details .column
+{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.column i
+{
+  color:black;
+  font-size:40px;
+}
+.column humidity
+{
+  margin :10px;
+}
+.details .temp , .humidity span
+{
+  font-size:18px;
+  font-weight: 500;
+}
+.details .temp .deg
+{
+  margin : 0;
+  font-size:17px;
+  pad : 0 2px 0 1px;
+}
+.details p
+{
+  font-size:14px;
+  margin-top:-6px;
+}
+#particles-js{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 171, 187);
+}
